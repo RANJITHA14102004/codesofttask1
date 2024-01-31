@@ -1,5 +1,3 @@
-/******* Bootstrap Theming ********/
-
 $primary: #0BCEAF;
 $secondary: #6c757d;
 $light: #ffffff;
@@ -19,8 +17,6 @@ $enable-responsive-font-sizes: true;
 
 @import "bootstrap/scss/bootstrap";
 
-
-/********** Template CSS ************/
 h1,
 .font-weight-bolder {
     font-weight: 900 !important;
