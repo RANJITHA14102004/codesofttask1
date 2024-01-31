@@ -1,7 +1,5 @@
 (function ($) {
     "use strict";
-
-    // Navbar on scrolling
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
             $('.navbar').fadeIn('slow').css('display', 'flex');
@@ -9,9 +7,6 @@
             $('.navbar').fadeOut('slow').css('display', 'none');
         }
     });
-
-
-    // Smooth scrolling on the navbar links
     $(".navbar-nav a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
@@ -26,9 +21,6 @@
             }
         }
     });
-
-
-    // Typed Initiate
     if ($('.typed-text-output').length == 1) {
         var typed_strings = $('.typed-text').text();
         var typed = new Typed('.typed-text-output', {
@@ -39,9 +31,6 @@
             loop: true
         });
     }
-
-
-    // Modal Video
     $(document).ready(function () {
         var $videoSrc;
         $('.btn-play').click(function () {
@@ -57,9 +46,6 @@
             $("#video").attr('src', $videoSrc);
         })
     });
-
-
-    // Scroll to Bottom
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scroll-to-bottom').fadeOut('slow');
@@ -67,17 +53,11 @@
             $('.scroll-to-bottom').fadeIn('slow');
         }
     });
-
-
-    // Skills
     $('.skill').waypoint(function () {
         $('.progress .progress-bar').each(function () {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
-
-
-    // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
@@ -88,9 +68,6 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-    
-    
-    // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
             $('.back-to-top').fadeIn('slow');
@@ -102,9 +79,6 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-
-
-    // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1500,
